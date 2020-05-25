@@ -25,9 +25,48 @@ targetCompatibility = 1.11
 
 group = "eu.miltema"
 archivesBaseName = "xmlutil"
-version = "1.3.2"
+version = "0.1.1"
 
 dependencies {
     implementation 'xerces:xercesImpl:2.12.0'
     testCompile group: 'junit', name: 'junit', version: '4.13'
+}
+
+modifyPom {
+    project {
+        name 'XmlUtil'
+        description 'A lightweight collection of Java XML-related utils'
+        url 'https://github.com/tehnomaan/xmlutil'
+        scm {
+            connection 'scm:git:git://github.com/tehnomaan/xmlutil.git'
+            developerConnection 'scm:git:git://github.com/tehnomaan/xmlutil.git'
+            url 'https://github.com/tehnomaan/xmlutil'
+        }
+        licenses {
+            license {
+                name 'GNU General Public License, Version 3'
+                url 'https://www.gnu.org/licenses/gpl-3.0.html'
+                distribution 'repo'
+            }
+        }
+        developers {
+            developer {
+                id 'margus'
+                name 'Margus Selge'
+                email 'margus.selge@gmail.com'
+            }
+        }
+    }
+}
+extraArchive {
+    sources = true
+    tests = true
+    javadoc = true
+}
+nexus {
+    sign = true
+    repositoryUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+    snapshotRepositoryUrl = 'https://oss.sonatype.org/content/repositories/snapshots/'
+}
+nexusStaging {
 }
