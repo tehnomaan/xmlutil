@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:sub:xs:2" >
+    <xs:complexType name="ExternalType">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="element1" type="xs:string"/>
+            <xs:element minOccurs="0" name="element2" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
