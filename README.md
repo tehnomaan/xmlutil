@@ -20,7 +20,7 @@ new XmlValidator(new SubfolderUriComposer("schemas")).
 
 # Dependencies
 
-Add SlimORM dependency into build.gradle:
+Add XmlUtil dependency into build.gradle:
 
 ```gradle
 dependencies {
