@@ -15,8 +15,8 @@ public class XmlValidator {
 
 	/**
 	 * Use this constructor if:
-	 * 1) You only have a single XSD file or
-	 * 2) if all XSD files are located in classpath root folder
+	 * * You only have a single XSD file or
+	 * * if all XSD files are located in classpath root folder
 	 */
 	public XmlValidator() {
 		xsdUriComposer = (referencingXsdUri, xsdName) -> xsdName;
@@ -32,7 +32,7 @@ public class XmlValidator {
 	}
 
 	/**
-	 * @param xml XML document as a string, for example <abc>my demo content</abc>
+	 * @param xml XML document as a string, for example &lt;abc&gt;my demo content&lt;/abc&gt;
 	 * @param xsdFilename XSD file name in classpath. If the XSD refers to another XSD file, that file too has to be located in the classpath
 	 * @throws Exception when validation fails
 	 */
